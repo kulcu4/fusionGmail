@@ -1,20 +1,53 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Fusion Gmail Android
 
-# Run and deploy your AI Studio app
+Fusion Gmail Android is a fully native Jetpack Compose application that reimagines the original web experience as a Kotlin-based creative studio. The app showcases style-driven wallpaper prompts, curated inspiration, and gallery previews that highlight how prompts map to generated artwork.
 
-This contains everything you need to run your app locally.
+## Features
 
-View your app in AI Studio: https://ai.studio/apps/drive/1BBGLFqyj0_Q2utTveslDCU3LYftdDqxz
+- ✨ Compose-powered UI with Material 3 styling and custom gradients
+- 🧠 Prompt entry with curated quick suggestions to inspire ideas
+- 🎨 Dynamic style carousel organised by category with premium callouts
+- 🖼️ Responsive gallery grid that works for image, video, and animation showcases
+- 🌙 Immersive dark theme aligned with the brand palette
 
-## Run Locally
+## Project structure
 
-**Prerequisites:**  Node.js
+```
+FusionGmail/
+├── build.gradle.kts
+├── settings.gradle.kts
+├── gradle.properties
+├── gradle/
+│   └── wrapper/
+│       └── gradle-wrapper.properties
+└── androidApp/
+    └── app/
+        ├── build.gradle.kts
+        └── src/main/
+            ├── AndroidManifest.xml
+            ├── java/com/example/fusiongmail/
+            │   ├── MainActivity.kt
+            │   ├── data/Model.kt
+            │   └── ui/theme/
+            │       ├── Color.kt
+            │       ├── Theme.kt
+            │       └── Type.kt
+            └── res/
+                ├── drawable/
+                ├── mipmap-anydpi-v26/
+                └── values/
+```
 
+## Getting started
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+1. **Open in Android Studio**
+   - From the welcome screen select *Open*, then choose the repository root.
+2. **Sync Gradle**
+   - Android Studio will automatically sync the included Gradle wrapper and download dependencies.
+3. **Run the app**
+   - Choose an Android device or emulator running API level 24+ and press **Run ▶️**.
+
+## Notes
+
+- Remote gallery imagery is powered by royalty-free Unsplash URLs.
+- Google Fonts integration is handled lazily at runtime; if the Play Services fonts provider is unavailable, the system font will be used instead.
